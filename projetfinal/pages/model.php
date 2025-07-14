@@ -16,4 +16,4 @@ if (isset($_GET['model'])) {
 
 <?php 
  include('../inc/footer.php'); 
- ?>
+?>
