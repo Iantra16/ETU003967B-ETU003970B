@@ -15,7 +15,7 @@ include('../inc/connection.php');
 </head>
 
 <body class="body">
-    <div class="container py-5 ">
+    <div class="container1 py-5 ">
         <div class="heading">Log In</div>
         <?php if (isset($_GET['erreur'])) { ?>
         <h4> ERROR on Password or Email </h4>

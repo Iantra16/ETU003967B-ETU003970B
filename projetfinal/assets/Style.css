@@ -15,11 +15,13 @@
 }
 
 .menu-fixe:hover {
-  transform: translateY(10px);
+    transform: translateY(10px);
 }
-.navbar-brand:hover , .nav-link:hover{
-  transform: translatex(2px);
-  color: #70c52a;
+
+.navbar-brand:hover,
+.nav-link:hover {
+    transform: translatex(2px);
+    color: #70c52a;
 }
 
 .title {
@@ -53,6 +55,7 @@
     justify-content: center;
     align-content: center;
 }
+
 /* .body{
     width: 100%;
     display: grid;
@@ -60,7 +63,7 @@
 /* } */
 
 /* po */
-.container {
+.container1 {
     max-width: 350px;
     background: #F8F9FD;
     background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
@@ -73,6 +76,7 @@
     margin-top: 30vh;
     /* margin-bottom: 50px; */
 }
+
 .container2 {
     max-width: 450px;
     background: #F8F9FD;
@@ -312,4 +316,120 @@
 
 .tab tbody tr:hover {
     background-color: #f0f0f0;
+}
+
+/* upload */
+
+.body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    margin-top: 50px;
+
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.form-group .form-text {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Styling for the submit button */
+.btn-upload {
+    display: block;
+    /* Make the button take full width */
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    /* Green for "Add" */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.btn-upload:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+.btn-upload:active {
+    transform: translateY(0);
+    /* Return to normal on click */
 }
