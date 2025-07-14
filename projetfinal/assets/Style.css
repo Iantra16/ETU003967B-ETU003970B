@@ -1,4 +1,27 @@
-/* From Uiverse.io by eslam-hany */
+.menu-fixe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 5px;
+    z-index: 1000;
+    background: #2cb5a0;
+    box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.menu-fixe:hover {
+  transform: translateY(10px);
+}
+.navbar-brand:hover , .nav-link:hover{
+  transform: translatex(2px);
+  color: #70c52a;
+}
+
 .title {
     text-align: center;
     font-size: 50px;
