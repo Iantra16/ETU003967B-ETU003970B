@@ -12,7 +12,11 @@
 <body class="background-page">
     <div class="content">
         <h1>Sign Up</h1>
-        <form action="traitement.php" method="post">
+         <?php if (isset($_GET['erreur'])) {?>
+            <h4> ERROR on Password or Email </h4>
+            <h4>Please try again </h4>
+        <?php }?>
+        <form action="../traitement/tratSingup.php" method="post">
 
             <div class="input-box">
                 <input type="text" name="nom" placeholder="Name" required >
@@ -32,6 +36,10 @@
             </div>
 
             <div class="input-box">
+                <input type="text" name="ville" placeholder="Ville" required>
+            </div>
+
+            <div class="input-box">
                 <input type="password" name="mdp" placeholder="Password" required>
             </div>
 
@@ -39,7 +47,7 @@
             <button type="submit" class="button">Sign UP</button>
 
             <div class="signUP">
-                <p>Already a member? <a href="index.php">Login</a></p>
+                <p>Already a member? <a href="login.php">Login</a></p>
                 <p><a href="data.php">Listes</a></p>
             </div>
 

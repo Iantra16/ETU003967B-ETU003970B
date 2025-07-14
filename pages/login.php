@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/Style.css">
+    <link rel="stylesheet" href="../assets/Style. css">
     <title>Login</title>
 </head>
 
@@ -18,9 +18,9 @@
         <h1>LOGIN</h1>
         <?php if (isset($_GET['erreur'])) {?>
             <h4> ERROR on Password or Email </h4>
-            <h4>Please try again</h4>
+            <h4>Please try again or Create a compt </h4>
         <?php }?>
-        <form action="traiteLogin.php" method="post">
+        <form action="../traitement/traiteLogin.php" method="post">
 
             <div class="input-box">
                 <input type="email" name="mail" placeholder="Email" required>

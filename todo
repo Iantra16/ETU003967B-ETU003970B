@@ -15,6 +15,10 @@ Insérer les données de test ok
 Page à créer
     Login et inscription ok 
         traitement _ log 
+                        
                    _ sing
+    _function 
+        insermember(nom , date de naissance, genre, émail, ville, mdp, image_profil)
+
     Liste des objets , (avec date de retour si emprunt en cours )
     Filtre par catégorie 
