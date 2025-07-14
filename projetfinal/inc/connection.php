@@ -32,7 +32,9 @@ SELECT
     m_proprietaire.nom AS proprietaire,
     e.date_emprunt,
     e.date_retour,
-    m_emprunteur.nom AS emprunteur_actuel
+    m_emprunteur.nom AS emprunteur_actuel,
+    (SELECT nom_image FROM final_project_images_objet
+         WHERE id_objet = o.id_objet ORDER BY id_image LIMIT 1) AS image_principale_nom
 FROM
     final_project_objet o
 JOIN
