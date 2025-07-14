@@ -1,11 +1,12 @@
 /* From Uiverse.io by eslam-hany */
-.title{
+.title {
     text-align: center;
     font-size: 50px;
     font-weight: bolder;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+
 .button {
     outline: 0 !important;
     border: 0 !important;
@@ -20,90 +21,131 @@
     transition: all ease-in-out 0.3s;
     cursor: pointer;
 }
+
 .button:hover {
     transform: translateY(-3px);
 }
 
-/* from */
-.form {
+.form-connect {
     justify-content: center;
-  --bg-light: #efefef;
-  --bg-dark: #707070;
-  --clr: #58bc82;
-  --clr-alpha: #9c9c9c60;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  max-width: 400px;
-  /* padding: auto; */
+    align-content: center;
+}
+/* .body{
+    width: 100%;
+    display: grid;
+    place-items: center; */
+/* } */
+
+/* po */
+.container {
+    max-width: 350px;
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 40px;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    /* margin: auto 20px; */
+    margin: auto;
+    margin-top: 30vh;
+    /* margin-bottom: 50px; */
+}
+.container2 {
+    max-width: 450px;
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 40px;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    /* margin: auto 20px; */
+    margin: auto;
+    margin-top: 3vh;
+    /* margin-bottom: 50px; */
 }
 
-.form .input-span {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.form input[type="number"] {
-  /* -moz-appearance: textfield; */
-  height: 2.5rem;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.form input {
-  border-radius: 0.5rem;
-  padding: 1rem 0.75rem;
-  width: 100%;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  outline: 2px solid var(--bg-dark);
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(16, 137, 211);
 }
 
-.form input:focus {
-  outline: 2px solid var(--clr);
+.form {
+    margin-top: 20px;
 }
 
-.label {
-  align-self: flex-start;
-  color: #58bc82;
-  font-weight: 600;
+.form .input {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
 }
 
-.form .submit {
-  width: 40%;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 3rem;
-  background-color:  white;
-  color: var(--clr);
-  border: none;
-  cursor: pointer;
-  transition: all 300ms;
-  font-weight: 600;
-  font-size: 0.9rem;
+.form .input::-moz-placeholder {
+    color: rgb(170, 170, 170);
 }
 
-.form .submit:hover {
-  /* background-color: var(--clr); */
-  background-color: #58bc82;
-  color: white;
+.form .input::placeholder {
+    color: rgb(170, 170, 170);
 }
 
+.form .input:focus {
+    outline: none;
+    border-inline: 2px solid #12B1D1;
+}
+
+.form .forgot-password {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.form .forgot-password a {
+    font-size: 11px;
+    color: #0099ff;
+    text-decoration: none;
+}
+
+.form .login-button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.form .login-button:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.form .login-button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}
+
+/* po */
 
 /* login */
-*{
-    margin:0 ;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-.body .background-page{
+.body .background-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +157,7 @@
     background-position: center;
 }
 
-.body{
+.body {
     background: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -125,7 +167,7 @@
     height: auto;
 }
 
-.content{
+.content {
     background-color: transparent;
     width: 420px;
     color: #fff;
@@ -133,22 +175,22 @@
     padding: 30px 40px;
     border: 2px solid white;
     backdrop-filter: blur(20px);
-    box-shadow:  0 0 10px rgba(0, 0, 0, -1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, -1);
 }
 
-.content h1{
+.content h1 {
     text-align: center;
     font-size: 36px;
 }
 
-.content .input-box{
+.content .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
 
-.input-box input{
+.input-box input {
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -162,18 +204,19 @@
 
 }
 
-.input-box input::placeholder{
+.input-box input::placeholder {
     color: #fff;
 }
 
-.input-box i{
-    position:absolute ;
+.input-box i {
+    position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
 }
-.content .button{
+
+.content .button {
     width: 100%;
     height: 40px;
     background-color: #ffffff;
@@ -187,25 +230,24 @@
     font-weight: bold;
 }
 
-.content .signUP{
+.content .signUP {
     font-size: 14.5px;
     text-align: center;
     margin: 20px 0 15px;
 }
 
-.signUP p a{
-    color: #fff;
+.signUP p a {
     text-decoration: none;
     font-weight: bold;
 }
 
-.signUP p a:hover{
+.signUP p a:hover {
     text-decoration: underline;
 }
 
 /* table */
-.tab{
-    max-width: 70%; 
+.tab {
+    max-width: 70%;
     border-collapse: collapse;
     margin: 20px auto;
     font-family: Arial, sans-serif;
@@ -242,9 +284,9 @@
 }
 
 .tab tbody tr:nth-child(even) {
-    background-color: #fcfcfc; 
+    background-color: #fcfcfc;
 }
 
 .tab tbody tr:hover {
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
