@@ -11,7 +11,7 @@ $listeObj = listeObj_Empunt();
             <th>categorie</th>
             <th>proprietaire</th>
             <th>date_retour</th>
-            <!-- emprunteur_actuel -->
+            <th>Details</th>
         </tr>
 
         <?php foreach ($listeObj as $val) { ?>
@@ -22,9 +22,14 @@ $listeObj = listeObj_Empunt();
                 <?php
                 if ($val['date_emprunt'] == NULL) { ?>
                     <td>Non Emprunter</td>
+                <?php } else if ($val['date_emprunt'] != NULL && $val['date_retour'] == NULL) { ?>
+                    <td>Non Retourner</td>
                 <?php } else { ?>
                     <td><?= $val['date_retour'] ?></td>
                 <?php } ?>
+                <td>
+                    <a href="model.php?model=fiche&&id_objet=<?= $val['id_objet']?>">Voir les details</a>
+                </td>
             </tr>
         <?php } ?>
 
