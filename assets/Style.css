@@ -1,0 +1,157 @@
+/* From Uiverse.io by eslam-hany */
+.navigation {
+    /* justify-items: center; */
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: rgba(0, 73, 144);
+    width: 70%;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+        rgba(0, 73, 144, 0.5) 5px 10px 15px;
+    transition: all 0.5s;
+}
+
+.navigation:hover {
+    /* width: 300px; */
+    margin-top: 10px;
+    transform: translatey(20px);
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+
+.button {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-size: 20px;
+}
+
+/* login */
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body.background-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../images/fond.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body{
+    background: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    height: auto;
+}
+
+.content{
+    background-color: transparent;
+    width: 420px;
+    color: #fff;
+    border-radius: 5%;
+    padding: 30px 40px;
+    border: 2px solid white;
+    backdrop-filter: blur(20px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, -1);
+}
+
+.content h1{
+    text-align: center;
+    font-size: 36px;
+}
+
+.content .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position:absolute ;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.content .button{
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, -1);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.content .signUP{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.signUP p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signUP p a:hover{
+    text-decoration: underline;
+}
