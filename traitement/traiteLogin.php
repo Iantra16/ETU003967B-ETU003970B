@@ -6,9 +6,9 @@ $mdp = $_POST['mdp'];
 if (VerifMembre($mail,$mdp)) {
     SessionConnecter($mail);
     echo "cshdvcutyfodtv";
-    // header('location:../pages/accueil.php');
+    header('location:../pages/model.php');
 }
 else {
-    header('location:../pages/login.php?erreur=1');
+    header('location:../pages/index.php?erreur=1');
 }
 ?>

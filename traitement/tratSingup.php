@@ -10,7 +10,7 @@
     $isert = InsertMembre($name,$birth,$gender,$mail,$ville,$password);
     if ($isert) {
         SessionConnecter($mail);
-        header('location:../pages/accueil.php');
+        header('location:../pages/model.php');
     } else {
         header('location:../pages/signUP.php?erreur=1');    
     }    

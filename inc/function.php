@@ -52,5 +52,13 @@ function listeObj() {
     }
     return $liste;
 }
-
+function listeObj_Empunt(){
+    $sql = "SELECT * FROM final_project_v_objet_emprunter";    
+    $sql = mysqli_query(dbconnect(), $sql);
+    $liste = [];
+    while ($objet = mysqli_fetch_assoc($sql)) {
+        $liste[] = $objet;
+    }
+    return $liste;
+}
 ?>

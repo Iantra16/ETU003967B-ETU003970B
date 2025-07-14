@@ -21,7 +21,7 @@ Page à créer
         verifieMembre ok
         sessionConnecter ok
 
-    Liste des objets , (avec date de retour si emprunt en cours )
+    Liste des objets , (avec date de retour si emprunt en cours ) ok
         _vue objet&emprunt  ok
 
     Filtre par catégorie 

@@ -49,6 +49,12 @@ SELECT obj.nom_objet,cat.nom_categorie,meb.nom,obj.id_objet
 FROM final_project_objet obj 
     join final_project_categorie cat on obj.id_categorie = cat.id_categorie
     join final_project_membre meb on obj.id_membre = meb.id_membre;
+
+create or replace view final_project_v_objet_emprunter as
+SELECT o.*,em.date_emprunt,em.date_retour from final_project_v_objet o 
+join final_project_emprunt em on em.id_objet = o.id_objet;
+    
+
     
 SELECT * from final_project_categorie;
 SELECT * from final_project_emprunt;
