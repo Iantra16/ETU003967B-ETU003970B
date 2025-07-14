@@ -44,6 +44,17 @@ CREATE TABLE final_project_emprunt (
     FOREIGN KEY (id_membre) REFERENCES final_project_membre(id_membre) ON DELETE CASCADE
 );
 
+create or replace view final_project_v_objet as
+SELECT obj.nom_objet,cat.nom_categorie,meb.nom,obj.id_objet 
+FROM final_project_objet obj 
+    join final_project_categorie cat on obj.id_categorie = cat.id_categorie
+    join final_project_membre meb on obj.id_membre = meb.id_membre;
+    
+SELECT * from final_project_categorie;
+SELECT * from final_project_emprunt;
+SELECT * from final_project_images_objet;
+SELECT * from final_project_objet;
+SELECT * from final_project_membre;
 
 
 -- 4 membres

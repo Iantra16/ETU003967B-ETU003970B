@@ -16,7 +16,7 @@ include('function.php');
 
     <header>
         <nav>
-            <div class="navigation">
+            <div class="navigation m-auto">
                 <button class="button">
                     <svg
                         class="icon"

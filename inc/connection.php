@@ -1,4 +1,4 @@
-<?php 
+<?php
 function dbconnect()
 {
     static $bdd = null;
@@ -15,4 +15,11 @@ function dbconnect()
 
     return $bdd;
 }
-?>
+
+$sql = "CREATE or replace view final_project_v_objet as
+    SELECT obj.nom_objet,cat.nom_categorie,meb.nom,obj.id_objet 
+    FROM final_project_objet obj 
+    join final_project_categorie cat on obj.id_categorie = cat.id_categorie
+    join final_project_membre meb on obj.id_membre = meb.id_membre";
+
+mysqli_query(dbconnect(),$sql);
