@@ -25,7 +25,7 @@ $liste_categorie = getListe_categorie();
 
     <div class="form-group">
         <label for="media">Images de l'objet (plusieurs sélections possibles) </label>
-        <input type="file" id="images" name="images[]" accept="image/*" required>
+        <input type="file" id="images" name="images[]" accept="image/*" required multiple>
         <small class="form-text text-muted">La première image téléchargée sera l'image principale.</small>
 
     </div>
