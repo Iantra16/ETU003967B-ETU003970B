@@ -1,7 +1,6 @@
 <?php
 
 $id = $_SESSION['Connecter']['id_membre'];
-
 $id_obj = $_GET['id_obj'];
 
 ?>
@@ -20,4 +19,5 @@ $id_obj = $_GET['id_obj'];
         <input type="submit" value="Emprunter">
     </form>
     <a href="model.php?model=accueil"><button>Retour</button></a>
+    <?= var_dump($_SESSION['Connection'])?>
 </div>

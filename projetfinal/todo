@@ -51,6 +51,12 @@ dans la fiche membre, mettre les infos du membre, ainsi que les objets du membre
 
 v3
 alea1
-liste obj + btn emprunter ok
-=>nbre de jour a emprunter (emprunter membre) ok
-=>liste disponible ce jour+ nbre jour non ok
+liste obj + btn emprunter ok 
+=>nbre de jour a emprunter (emprunter membre) ok 
+=>liste disponible ce jour+ nbre jour non ok 
+
+
+Fiche membre 
+g
+        liste de emprunt 
+                retour 

@@ -60,8 +60,12 @@ SELECT * from final_project_categorie;
 SELECT * from final_project_emprunt;
 SELECT * from final_project_images_objet;
 SELECT * from final_project_objet;
-SELECT * from final_project_membre;
+SELECT * from final_project_v_objet_emprunter_ko;
 
+create or replace view final_project_v_objet_emprunter_ko as
+SELECT o.*,em.date_emprunt,em.date_retour,em.id_membre From final_project_emprunt em
+ join final_project_v_objet o on em.id_objet = o.id_objet
+ WHERE  (em.id_membre = '%d' ) and (em.date_retour is null or em.date_retour >= NOW()) ;
 
 -- 4 membres
 INSERT INTO final_project_membre (nom, date_naissance, gender, email, ville, mdp, image_profil) VALUES

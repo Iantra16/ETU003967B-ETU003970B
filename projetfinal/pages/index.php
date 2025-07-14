@@ -22,8 +22,8 @@ include('../inc/connection.php');
         <h4>Please try again or Create a compt </h4>
         <?php } ?>
         <form action="../traitement/traiteLogin.php" method="post" class="form">
-            <input required="" class="input" type="email" name="email" id="email" placeholder="E-mail">
-            <input required="" class="input" type="password" name="password" id="password" placeholder="Password">
+            <input required="" class="input" type="email" name="mail" id="mail" placeholder="E-mail">
+            <input required="" class="input" type="password" name="mdp" id="mdp" placeholder="Password">
             <!-- <span class="forgot-password"><a href="#">Forgot Password ?</a></span> -->
             <input class="login-button" type="submit" value="Sign In">
 

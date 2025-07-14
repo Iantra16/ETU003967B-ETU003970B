@@ -2,6 +2,8 @@
 include('../inc/function.php');
 
 $mail = $_POST['mail'];
+echo $mail;
+$_SESSION['mail'] = $mail;
 $mdp = $_POST['mdp'];
 if (VerifMembre($mail,$mdp)) {
     SessionConnecter($mail);

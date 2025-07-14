@@ -19,9 +19,16 @@ function SessionConnecter($mail)
 {
     $sql = "select * from final_project_membre where email = '%s'";
     $sql = sprintf($sql, $mail);
+    echo $sql;
     $requete = mysqli_query(dbconnect(), $sql);
     $membre = mysqli_fetch_assoc($requete);
     $_SESSION['Connecter'] = $membre;
+    $sql = "CREATE or replace view final_project_v_objet_emprunter_ko as
+    SELECT o.*,em.date_emprunt,em.date_retour,em.id_membre From final_project_emprunt em
+    join final_project_v_objet o on em.id_objet = o.id_objet
+    WHERE  (em.id_membre = '%s' ) and (em.date_retour is null or em.date_retour >= NOW()) ";
+    $sql = sprintf($sql, $_SESSION['Connecter']['id_membre']);
+    mysqli_query(dbconnect(), $sql);
 }
 
 function VerifMembre($mail, $mdp)
@@ -30,7 +37,7 @@ function VerifMembre($mail, $mdp)
     $sql = sprintf($sql, $mail, $mdp);
 
     $requete = mysqli_query(dbconnect(), $sql);
-    if ($requete) {
+    if ($requete && mysqli_num_rows($requete) > 0) {
         return TRUE;
     }
     return false;
@@ -159,5 +166,13 @@ function Emprunt($id_obj) {
     }
     return false;
 }
-
+function getEmpruntofme(){
+    $sql = "SELECT * FROM final_project_v_objet_emprunter_ko";
+    $sql = mysqli_query(dbconnect(), $sql);
+    $liste = [];
+    while ($objet = mysqli_fetch_assoc($sql)) {
+        $liste[] = $objet;
+    }
+    return $liste;
+}
 

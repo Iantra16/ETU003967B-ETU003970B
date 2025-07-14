@@ -1,7 +1,7 @@
 <?php
 include('../inc/header.php');
 
-$page = "accueil";
+$page = "ficheMembre"; // Default page
 if (isset($_GET['model'])) {
     $page = $_GET['model'];
 }
