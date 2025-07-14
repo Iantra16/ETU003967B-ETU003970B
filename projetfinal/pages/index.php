@@ -23,10 +23,10 @@ include('../inc/connection.php');
         <?php } ?>
         <form class="form m-auto " action="../traitement/traiteLogin.php" method="post">
             <span class="input-span">
-                <label class="label" for="mail">Departement</label>
+                <label class="label" for="mail">Email :</label>
                 <input type="email" name="mail" id="mail" required /></span>
             <span class="input-span">
-                <label for="mdp" class="label">Nom Employee</label>
+                <label for="mdp" class="label">Mot de passe :</label>
                 <input type="password" name="mdp" required /></span>
 
             <input class="submit" type="submit" value="LOG IN" />
