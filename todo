@@ -18,7 +18,9 @@ Page à créer
                         
                    _ sing
     _function 
-        insermember(nom , date de naissance, genre, émail, ville, mdp, image_profil)
+        insermember(nom , date de naissance, genre, émail, ville, mdp, image_profil)    ok
+        verifieMembre ok
+        sessionConnecter ok
 
     Liste des objets , (avec date de retour si emprunt en cours )
     Filtre par catégorie 
