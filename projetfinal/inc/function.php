@@ -151,16 +151,10 @@ function getHistoricEmprunt($id_obj)
 
 function Emprunt($id_obj) {
     $id_membre = $_SESSION['Connecter']['id_membre'];
-
     $sql = "INSERT INTO final_project_emprunt (id_objet, id_membre, date_emprunt) VALUES ('%s', '%s', NOW())";
     $sql = sprintf($sql, $id_obj, $id_membre);
     $requete = mysqli_query(dbconnect(), $sql);
-
-    $sql2 = "UPDATE final_project_objet SET emprunteur_actuel = '%s' WHERE id_objet = '%s'";
-    $sql2 = sprintf($sql2, $id_membre, $id_obj);
-    $requete2 = mysqli_query(dbconnect(), $sql2);
-
-    if ($requete && $requete2) {
+    if ($requete) {
         return TRUE;
     }
     return false;
