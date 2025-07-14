@@ -29,7 +29,7 @@
         
         <input class="submit" type="submit" value="LOG IN" />
         <div class="signUP">
-                <p>Not a member? <a href="signUP.php">Register</a></p>
+                <p>Not a member? <a href="signUP.php" class="text-dark">Register</a></p>
             </div>
     </form>
 </div>
