@@ -17,7 +17,8 @@ function formater_nombre($nombre)
     $ret = number_format($nombre, 0, ',', ' ');
     return $ret;
 }
-function SessionConnecter($mail){
+function SessionConnecter($mail)
+{
     $sql = "select * from final_project_membre where email = '%s'";
     $sql = sprintf($sql, $mail);
     $requete = mysqli_query(dbconnect(), $sql);
@@ -25,9 +26,10 @@ function SessionConnecter($mail){
     $_SESSION['Connecter'] = $membre;
 }
 
-function VerifMembre($mail,$mdp){
+function VerifMembre($mail, $mdp)
+{
     $sql = "select * from final_project_membre where email = '%s' and mdp = '%s'";
-    $sql = sprintf($sql, $mail,$mdp);
+    $sql = sprintf($sql, $mail, $mdp);
 
     $requete = mysqli_query(dbconnect(), $sql);
     if ($requete) {
@@ -35,7 +37,8 @@ function VerifMembre($mail,$mdp){
     }
     return false;
 }
-function InsertMembre($nom , $dnt, $genre, $email, $ville, $mdp){
+function InsertMembre($nom, $dnt, $genre, $email, $ville, $mdp)
+{
     $sql = " INSERT INTO final_project_membre (nom, date_naissance, gender, email, ville, mdp) VALUES
 ('%s', '%s', '%s', '%s', '%s', '%s')";
     $sql = sprintf($sql, $nom, $dnt, $genre, $email, $ville, $mdp);
@@ -46,7 +49,8 @@ function InsertMembre($nom , $dnt, $genre, $email, $ville, $mdp){
     return false;
 }
 
-function listeObj() {
+function listeObj()
+{
     $sql = "SELECT * from final_project_v_objet";
     $sql = mysqli_query(dbconnect(), $sql);
     $liste = [];
@@ -55,8 +59,9 @@ function listeObj() {
     }
     return $liste;
 }
-function listeObj_Empunt(){
-    $sql = "SELECT * FROM final_project_v_objet_emprunter";    
+function listeObj_Empunt()
+{
+    $sql = "SELECT * FROM final_project_v_objet_emprunter";
     $sql = mysqli_query(dbconnect(), $sql);
     $liste = [];
     while ($objet = mysqli_fetch_assoc($sql)) {
@@ -65,7 +70,8 @@ function listeObj_Empunt(){
     return $liste;
 }
 
-function getListe_categorie(){
+function getListe_categorie()
+{
     $sql = "SELECT * FROM final_project_categorie";
     $sql = mysqli_query(dbconnect(), $sql);
     $liste = [];
@@ -75,7 +81,8 @@ function getListe_categorie(){
     return $liste;
 }
 
-function insertObj($nom_objet , $id_categorie, $id_membre) {
+function insertObj($nom_objet, $id_categorie, $id_membre)
+{
     $sql = "INSERT INTO final_project_objet (nom_objet, id_categorie, id_membre) VALUES
 ('%s', '%s', '%s')";
     $sql = sprintf($sql, $nom_objet, $id_categorie, $id_membre);
@@ -83,10 +90,11 @@ function insertObj($nom_objet , $id_categorie, $id_membre) {
     if ($requete) {
         return TRUE;
     }
-    return false;   
+    return false;
 }
 
-function getObj($id_obj) {
+function getObj($id_obj)
+{
     $sql = "SELECT * FROM final_project_v_objet_emprunter WHERE id_objet = '%s'";
     $sql = sprintf($sql, $id_obj);
     $requete = mysqli_query(dbconnect(), $sql);
@@ -100,7 +108,8 @@ function getObj($id_obj) {
     return null;
 }
 
-function getMembre($id_membre) {
+function getMembre($id_membre)
+{
     $sql = "SELECT * FROM final_project_membre WHERE id_membre = '%s'";
     $sql = sprintf($sql, $id_membre);
     $requete = mysqli_query(dbconnect(), $sql);
@@ -110,4 +119,33 @@ function getMembre($id_membre) {
     }
     return false;
 }
-?>
+
+function getImage_obj($id_obj)
+{
+    $sql = "SELECT * FROM final_project_images_objet WHERE id_objet = '%s'";
+    $sql = sprintf($sql, $id_obj);
+    $requete = mysqli_query(dbconnect(), $sql);
+    $rep = array();
+    if ($requete) {
+        while ($image = mysqli_fetch_assoc($requete)) {
+            $rep[] = $image;
+        }
+        return $rep;
+    }
+    return null;
+}
+
+function getHistoricEmprunt($id_obj)
+{
+    $sql = "SELECT * FROM final_project_emprunt WHERE id_objet = '%s'";
+    $sql = sprintf($sql, $id_obj);
+    $requete = mysqli_query(dbconnect(), $sql);
+    $rep = array();
+    if ($requete) {
+        while ($emprunt = mysqli_fetch_assoc($requete)) {
+            $rep[] = $emprunt;
+        }
+        return $rep;
+    }
+    return null;
+}
