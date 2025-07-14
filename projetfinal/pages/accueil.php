@@ -12,6 +12,7 @@ $listeObj = listeObj_Empunt();
             <th>proprietaire</th>
             <th>date_retour</th>
             <th>Details</th>
+            <th>Emprunt</th>
         </tr>
 
         <?php foreach ($listeObj as $val) { ?>
@@ -19,17 +20,22 @@ $listeObj = listeObj_Empunt();
                 <td><?= $val['nom_objet'] ?></td>
                 <td><?= $val['categorie'] ?></td>
                 <td><?= $val['proprietaire'] ?></td>
-                <?php
-                if ($val['date_emprunt'] == NULL) { ?>
+                <?php if ($val['date_emprunt'] == NULL) { ?>
                     <td>Non Emprunter</td>
                 <?php } else if ($val['date_emprunt'] != NULL && $val['date_retour'] == NULL) { ?>
                     <td>Non Retourner</td>
+                <?php } else if (isset($_GET['nbre_emprunt']) && $val['date_retour'] == NULL) {
+                    $dateRetour = date('Y-m-d', strtotime($val['date_emprunt']) . ' + ' . $_GET['nbre_emprunt'] . ' jours');?>
+                    <td>Disponible dans <?= $dateRetour ?></td>
                 <?php } else { ?>
                     <td><?= $val['date_retour'] ?></td>
                 <?php } ?>
                 <td>
                     <a href="model.php?model=fiche&&id_objet=<?= $val['id_objet']?>">Voir les details</a>
                 </td>
+                <?php if ($val['date_emprunt'] == NULL) { ?>
+                    <td><a href="model.php?model=emprunt&&id_obj=<?= $val['id_objet']?>"><button>Emprunter</button></a></td>
+                <?php } ?>
             </tr>
         <?php } ?>
 
