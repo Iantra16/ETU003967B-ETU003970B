@@ -8,7 +8,7 @@ if (isset($_GET['model'])) {
 
 ?>
 
-<main>
+<main class="pt-6" style="padding-top: 55px;">
 
         <?php include($page.'.php');?>
 
